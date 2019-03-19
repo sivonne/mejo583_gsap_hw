@@ -4,7 +4,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>GSAP animation</title>
 		<style type="text/css">
-			@import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
+			@import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
 			body { padding: 10px; font-family: 'Open Sans', sans-serif; }
       a#myAdLink {
         display: inline-block; background-color:#2480d6;
@@ -26,13 +26,21 @@
         top: 0px;
         left: 0px;
       }
+      #myAd #myAd_photo{
+        width: inherit; 
+        height: 143px;
+        background-position: 0px -325px;
+        bottom: 0px;
+        left: 0px;
+      }
 		</style>
 	</head>
 	<body>
   <a id="myAdLink" href="http://lynda.com">
     <div id="myAd">
-      <div class="myAd_Img" id="myAd_clouds">
-        
+      <div class="myAd_Img" id="myAd_clouds"> 
+      </div>
+      <div class="myAd_Img" id="myAd_photo"> 
       </div>
     </div>
     
@@ -41,6 +49,6 @@
     
     
 	</body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+<!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script> -->
 
 </html>
