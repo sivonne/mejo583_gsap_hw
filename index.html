@@ -4,6 +4,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>GSAP animation</title>
 		<style type="text/css">
+/*       css styling */
 			@import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
 			body { padding: 10px; font-family: 'Open Sans', sans-serif; }
       a#myAdLink {
@@ -69,7 +70,6 @@
         display: inline-block;
         position: relative;
       }
-      
 		</style>
 	</head>
 	<body>
@@ -87,13 +87,13 @@
       <div class="myAd_Img" id="myAd_surfboard"></div>
     </div>
     </a>
-
+<!-- all the GSAP S files needed for the animations -->
     <script type="text/javascript" src="CSSPlugin.min.js"></script>
     <script type="text/javascript" src="EasePack.min.js"></script>
     <script type="text/javascript" src="TweenLite.min.js"></script>
     <script type="text/javascript" src="TimelineMax.min.js"></script>
-
     <script type="text/javascript">
+      //all the animations for the ad
     (function(){
         var tl1 = new TimelineMax();
         tl1.to('#myAd', .4, {opacity: 1})
@@ -123,18 +123,7 @@
       
         var tl2 = new TimelineMax({repeat:-1});//-1 sets the animation to looping continuously
         tl2.to('#myAd_clouds', 65, {backgroundPositionX: 649, ease: Power0.easeOut });//camel-case in JS
-      
-    
-    
-    
-    
     }());
-    
-    
-    
     </script>
-    
 	</body>
-<!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
- -->
 </html>
