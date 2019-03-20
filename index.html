@@ -14,6 +14,7 @@
         height: 200px;
         position: relative;
         overflow: hidden;
+        opacity: 0;
       }
       #myAd .myAd_Img {
         position: absolute; 
@@ -25,6 +26,7 @@
         height: inherit;
         top: 0px;
         left: 0px;
+        background-repeat: repeat-x;
       }
       #myAd #myAd_photo{
         width: inherit; 
@@ -70,7 +72,17 @@
     <div id="myAd">
       <div class="myAd_Img" id="myAd_clouds"></div>
       <div class="myAd_Img" id="myAd_photo"></div>
-      <div id="myAd_txt1">Feeling stressed?</div>
+      <div id="myAd_txt1"><span id="myAd_ltr01">F</span><span id="myAd_ltr02">e</span><span id="myAd_ltr03">e</span><span id="myAd_ltr04">l</span><span id="myAd_ltr05">i</span><span id="myAd_ltr06">n</span><span id="myAd_ltr07">g</span>
+      <span id="myAd_ltr07">s</span>
+      <span id="myAd_ltr08">t</span>
+      <span id="myAd_ltr09">r</span>
+      <span id="myAd_ltr07">e</span>
+      <span id="myAd_ltr07">s</span>
+      <span id="myAd_ltr07">s</span>
+      <span id="myAd_ltr07">e</span>
+      <span id="myAd_ltr07">d</span>
+      <span id="myAd_ltr07">?</span>
+      </div>
       <div id="myAd_txt2">You could be here!</div>
       <div class="myAd_Img" id="myAd_shadow"></div>
       <div class="myAd_Img" id="myAd_txt3"></div>
@@ -83,7 +95,8 @@
     <script type="text/javascript">
     (function(){
         var tl1 = new TimelineMax();
-        tl1.from('#myAd_txt2', 1.3, {top: -100, ease: Power2.easeOut})
+        tl1.to('#myAd', .4, {opacity: 1})
+        from('#myAd_txt2', 1.3, {top: -100, ease: Power2.easeOut})
         .to('#myAd_txt1', 1.3, { top: 210, ease: Power2.easeOut}, '-=.9' )
         .from('#myAd_marker', 1.2, {top: -110, ease: Bounce.easeOut }, '-=.5')
         .from('#myAd_shadow', 1.2, {opacity: 0, ease: Bounce.easeOut }, '-=1.2')
@@ -92,8 +105,8 @@
       
         //cool trick! isolates the playback to just this animation // tl1.seek('cta');
       
-        var tl2 = new TimelineMax();
-        tl
+        var tl2 = new TimelineMax({repeat:-1});//-1 sets the animation to looping continuously
+        tl2.to('#myAd_clouds', 65, {backgroundPositionX: 649, ease: Power0.easeOut });//camel-case in JS
       
     
     
