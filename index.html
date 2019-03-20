@@ -45,7 +45,7 @@
       #myAd #myAd_marker {
         width: 60px;
         height: 95px;
-        background-position: -3px -230px;
+        background-position: -243px -230px;
         top:90px; left:290px;
       }
       #myAd #myAd_shadow {
@@ -58,7 +58,11 @@
         background-position: -2px -202px;
         top: 58px; left: 73px;
       }
-      
+      #myAd #myAd_surfboard {
+        width: 237px; height: 62px;
+        background-position: -2px -233px;
+        top: 110px; left: 390px;
+      }
 		</style>
 	</head>
 	<body>
@@ -73,10 +77,24 @@
       <div class="myAd_Img" id="myAd_marker"></div>
       <div class="myAd_Img" id="myAd_surfboard"></div>
     </div>
-    
     </a>
 
+    <script type="text/javascript" src="TweenMax.min.js"></script>
+    <script type="text/javascript">
+    (function(){
+        var tl1 = new TimelineMax();
+        tl1.from('#myAd_txt2', 1.3, {
+        top: -100;
+        });
     
+    
+    
+    
+    }());
+    
+    
+    
+    </script>
     
 	</body>
 <!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
